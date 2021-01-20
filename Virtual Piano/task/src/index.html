@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: sienna;
+        }
+        .container {
+            margin: 10% auto;
+            width: 60%;
+            text-align: center;
+            position: relative;
+        }
+        kbd {
+            border: solid black thin;
+            display: inline-block;
+            height: 59px;
+            margin-left: -5px;
+            padding-top: 124px;
+            font-family: 'Lobster', cursive;
+        }
+        .white-keys {
+            margin: auto;
+        }
+
+        .white-keys kbd {
+            background-color: white;
+            width: 60px;
+        }
+        .black-keys {
+            color: white;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            text-align: center;
+            left: calc(50% - 60px);
+        }
+        .black-keys kbd {
+            background-color: black;
+            /*border: solid 1px;*/
+            padding-top: 10px;
+            box-sizing: border-box;
+            width: 45px;
+            height: 100px;
+        }
+
+        #W {
+            position: relative;
+            right: 115px;
+        }
+        #E {
+            position: relative;
+            right: 95px;
+        }
+        #T {
+            position: relative;
+            right: 18px;
+        }
+        #Y {
+            position: relative;
+            right: 1px;
+        }
+        #U {
+            position: relative;
+            right: -18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="white-keys">
+            <kbd>A</kbd>
+            <kbd>S</kbd>
+            <kbd>D</kbd>
+            <kbd>F</kbd>
+            <kbd>G</kbd>
+            <kbd>H</kbd>
+            <kbd>J</kbd>
+        </div>
+        <div class="black-keys">
+            <kbd id="W">W</kbd>
+            <kbd id="E">E</kbd>
+            <kbd id="T">T</kbd>
+            <kbd id="Y">Y</kbd>
+            <kbd id="U">U</kbd>
+        </div>
+    </div>
+<script>
+    document.addEventListener("keypress", function (e) {
+        if (e.code === "KeyA" ) {
+            let audioA = new Audio("audio/A.mp3")
+            audioA.play();
+        } else if (e.code === "KeyS") {
+            let audioS = new Audio("audio/S.mp3")
+            audioS.play();
+        } else if (e.code === "KeyD") {
+            let audioD = new Audio("audio/D.mp3")
+            audioD.play();
+        } else if (e.code === "KeyF") {
+            let audioF = new Audio("audio/F.mp3")
+            audioF.play();
+        } else if (e.code === "KeyG") {
+            let audioG = new Audio("audio/G.mp3")
+            audioG.play();
+        } else if (e.code === "KeyH") {
+            let audioH = new Audio("audio/H.mp3")
+            audioH.play();
+        } else if (e.code === "KeyJ") {
+            let audioJ = new Audio("audio/J.mp3")
+            audioJ.play();
+        } else if (e.code === "KeyW") {
+            let audioW = new Audio("audio/W.mp3")
+            audioW.play();
+        } else if (e.code === "KeyE") {
+            let audioE = new Audio("audio/E.mp3")
+            audioE.play();
+        } else if (e.code === "KeyT") {
+            let audioT = new Audio("audio/T.mp3")
+            audioT.play();
+        } else if (e.code === "KeyY") {
+            let audioY = new Audio("audio/Y.mp3")
+            audioY.play();
+        } else if (e.code === "KeyU") {
+            let audioU = new Audio("audio/U.mp3")
+            audioU.play();
+        } else {
+            console.log("Invalid key has been pressed")
+        }
+    })
+</script>
+</body>
+</html>
